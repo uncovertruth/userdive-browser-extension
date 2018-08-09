@@ -4,10 +4,6 @@
   "author": "UNCOVER TRUTH",
   "manifest_version": 2,
   "description": "The web extension for NG",
-  "icons": {
-    "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
-  },
   "background": {
     "scripts": [
       "scripts/chromereload.js",
