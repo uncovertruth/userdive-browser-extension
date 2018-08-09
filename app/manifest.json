@@ -1,0 +1,38 @@
+{
+  "name": "USERDIVE Tracker",
+  "version": "0.0.0",
+  "author": "UNCOVER TRUTH",
+  "manifest_version": 2,
+  "description": "The web extension for NG",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "optional_permissions": [],
+  "options_page": "options.html",
+  "browser_action": {
+    "default_title": "USERDIVE tracker",
+    "default_popup": "popup.html"
+  }
+}

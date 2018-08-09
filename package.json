@@ -1,0 +1,35 @@
+{
+  "name": "userdive-browser-extension",
+  "version": "1.0.0",
+  "description": "Web browser extensions for USERDIVE",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:html": "pug app/pages/ -o dist",
+    "build:js": "webpack",
+    "build:manifest": "cpx app/manifest.json dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist"
+  },
+  "repository": "git+https://github.com/taka-sho/userdive-browser-extension.git",
+  "keywords": [],
+  "author": "taka-sho <takasho530000@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taka-sho/userdive-browser-extension/issues"
+  },
+  "homepage": "https://github.com/taka-sho/userdive-browser-extension#readme",
+  "devDependencies": {
+    "@types/webpack": "^4.4.9",
+    "cpx": "^1.5.0",
+    "npm-run-all": "^4.1.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^4.4.2",
+    "ts-node": "^7.0.0",
+    "typescript": "^3.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
