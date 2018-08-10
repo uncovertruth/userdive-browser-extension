@@ -1,6 +1,6 @@
 {
   "name": "userdive-browser-extension",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Web browser extensions for USERDIVE",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "prebuild": "rimraf dist",
     "precommit": "lint-staged"
   },
-  "repository": "git+https://github.com/taka-sho/userdive-browser-extension.git",
+  "repository": "git+https://github.com/uncovertruth/userdive-browser-extension.git",
   "keywords": [],
   "jest": {
     "moduleFileExtensions": [
@@ -35,12 +35,11 @@
       "git add"
     ]
   },
-  "author": "taka-sho <takasho530000@gmail.com>",
-  "license": "ISC",
+  "author": "UNCOVER TRUTH Inc.",
   "bugs": {
-    "url": "https://github.com/taka-sho/userdive-browser-extension/issues"
+    "url": "https://github.com/uncovertruth/userdive-browser-extension/issues"
   },
-  "homepage": "https://github.com/taka-sho/userdive-browser-extension#readme",
+  "homepage": "https://github.com/uncovertruth/userdive-browser-extension#readme",
   "devDependencies": {
     "@types/chrome": "^0.0.71",
     "@types/jest": "^23.3.1",

@@ -6,7 +6,6 @@
   "description": "The web extension for NG",
   "background": {
     "scripts": [
-      "scripts/chromereload.js",
       "scripts/background.js"
     ],
     "persistent": false
@@ -23,7 +22,10 @@
     }
   ],
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "contextMenus",
+    "runtime",
+    "tabs"
   ],
   "optional_permissions": [],
   "options_page": "options.html",
