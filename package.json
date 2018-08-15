@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build": "run-p build:*",
-    "build:html": "pug app/pages/ -o dist",
-    "build:js": "webpack",
+    "build:pug": "pug app/pages/ -o dist",
+    "build:ts": "webpack",
     "build:manifest": "cpx app/manifest.json dist",
     "lint": "tslint '{app,__tests__}/**/*.ts'",
     "test": "jest",
     "prebuild": "rimraf dist",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prewatch": "yarn build",
+    "watch": "run-p watch:*",
+    "watch:pug": "pug app/pages/ -o dist -w",
+    "watch:ts": "webpack --watch"
   },
   "repository": "git+https://github.com/uncovertruth/userdive-browser-extension.git",
   "keywords": [],

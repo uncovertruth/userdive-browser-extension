@@ -1,2 +1,2 @@
-declare var browser: any
-export const browsers = browser || chrome
+declare var global: any
+export const browsers = global.browser || global.chrome
