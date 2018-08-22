@@ -1,1 +1,1 @@
-import { browsers } from '../consts'
+import * as browsers from 'webextension-polyfill'

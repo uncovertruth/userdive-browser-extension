@@ -10,6 +10,7 @@
     ],
     "persistent": false
   },
+  "icons": {},
   "content_scripts": [
     {
       "matches": [
@@ -18,20 +19,15 @@
       "js": [
         "scripts/contentscript.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_start"
     }
   ],
   "permissions": [
-    "activeTab",
-    "contextMenus",
     "tabs"
   ],
-  "optional_permissions": [],
-  "options_ui": {
-    "page": "options.html"
-  },
+  "options_page": "options.html",
   "browser_action": {
-    "default_title": "USERDIVE tracker",
+    "default_title": "USERDIVE Web Extension",
     "default_popup": "popup.html"
   }
 }
