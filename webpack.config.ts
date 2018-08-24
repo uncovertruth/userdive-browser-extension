@@ -1,6 +1,8 @@
-import * as webpack from 'webpack'
+import * as ChromeExtemsionReloader from 'webpack-chrome-extension-reloader'
+import * as CopyWebpackPlugin from 'copy-webpack-plugin'
 import * as path from 'path'
 import * as UglifyJSPlugin from 'uglifyjs-webpack-plugin'
+import * as webpack from 'webpack'
 
 export default {
   entry: {
@@ -20,10 +22,6 @@ export default {
         test: /\.ts$/,
         exclude: /node_modules/,
         loader: ['ts-loader']
-      },
-      {
-        test: /\.css$/,
-        loader: ['style-loader', 'css-loader?modules']
       }
     ]
   },
@@ -43,6 +41,13 @@ export default {
           comments: false
         }
       }
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, 'app', 'manifest.json'),
+        to: path.resolve(__dirname, 'dist')
+      }
+    ]),
+    new ChromeExtemsionReloader()
   ]
 }

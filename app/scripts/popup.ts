@@ -1,13 +1,18 @@
-import * as browsers from 'webextension-polyfill'
+import {
+  BROWSER as browser,
+  GLOBAL as global
+} from './consts'
 
-// content_script とメッセージング
-browsers.tabs.query(
+browser.tabs.query(
   { active: true, currentWindow: true },
   (tabs) => {
-    browsers.tabs.sendMessage(
+    browser.tabs.sendMessage(
       tabs[0].id,
-      { content: 'honya' },
-      (res) => { console.log(res.popup) }
+      { content: 'hello, i\'m popup' },
+      (response) => {
+        const tag = global.document.getElementsByTagName('h1')[0]
+        tag.innerHTML = response.popup
+      }
     )
   }
 )

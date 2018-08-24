@@ -1,9 +1,7 @@
-import * as browsers from 'webextension-polyfill'
+import { BROWSER as browser } from './consts'
 
-// popup とメッセージング
-browsers.runtime.onMessage.addListener(
+browser.runtime.onMessage.addListener(
   (request, sender, sendResponse) => {
-    console.log('message: ', request.content)
-    sendResponse({ popup: 'hi'})
+    sendResponse({ popup: 'success!' })
   }
 )
